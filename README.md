@@ -10,8 +10,8 @@
 
 ### Association
 - has_many :messeages
-- has_many :groups_users
-- has_many :groups, through: :groups_users
+- has_many :group_users
+- has_many :groups, through: :group_users
 
 ## groups table
 
@@ -21,10 +21,10 @@
 
 ### Association
 - has_many :messeages
-- has_many :groups_users
-- has_many :users, through: :groups_users
+- has_many :group_users
+- has_many :users, through: :group_users
 
-## groups_users table
+## group_users table
 
 | Column         | Type           |Options        |
 | :------------- | :------------- |:------------- |
