@@ -17,7 +17,7 @@
 
 | Column         | Type           |Options        |
 | :------------- | :------------- |:------------- |
-| name           | string         |:null: false, unique: true, index: true|
+| name           | string         |:null: false, unique: true|
 
 ### Association
 - has_many :messeages
@@ -32,8 +32,8 @@
 | group          | references     |:null: false, foreign_key: true|
 
 ### Association
-- belongs_to :groups_users
-- belongs_to :messeages
+- belongs_to :user
+- belongs_to :group
 
 ##messages table
 ## messages table
