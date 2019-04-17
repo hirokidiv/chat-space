@@ -7,11 +7,10 @@
 | Column         | Type           |Options        |
 | :------------- | :------------- |:------------- |
 | name           | string         |:null: false, unique: true, index: true|
-| email          | string         |:null: false   |
-| group          | references     |:null: false, foreign_key: true   |
 
 ### Association
 - has_many :messeages
+- has_many :groups_users
 - has_many :groups, through: :groups_users
 
 ## groups table
@@ -19,10 +18,10 @@
 | Column         | Type           |Options        |
 | :------------- | :------------- |:------------- |
 | name           | string         |:null: false, unique: true, index: true|
-| user           | references     |:null: false, foreign_key: true   |
 
 ### Association
 - has_many :messeages
+- has_many :groups_users
 - has_many :users, through: :groups_users
 
 ## groups_users table
@@ -33,18 +32,20 @@
 | group          | references     |:null: false, foreign_key: true|
 
 ### Association
-- has_many :groups_users
-- has_many :messeages
+- belongs_to :groups_users
+- belongs_to :messeages
 
+##messages table
 ## messages table
 
 | Column         | Type           |Options        |
 | :------------- | :------------- |:------------- |
-| body           | text           |:              |
-| image          | string         |:              |
+| body           | text           |               |
+| image          | string         |               |
 | user           | references     |:null: false, foreign_key: true|
-| group       | references     |:null: false, foreign_key: true|
+| group          | references     |:null: false, foreign_key: true|
 
+##Association
 ### Association
 - belongs_to :user
 - belongs_to :group
