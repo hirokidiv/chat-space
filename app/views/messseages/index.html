@@ -1,0 +1,65 @@
+<div class="flash-box">
+  <div class="noticw">グループを作成しました</div>
+</div>
+<div class="wrapper">
+  <div class="chat-side">
+    <div class="side-header">
+      <p class="side-header__user-name"></p>
+      <ul class="user-menu">
+        <li class="user-menu__user-name">
+          <a href="/groups/new">
+            <i class="fa fa-edit"></i>
+          </a>
+        </li>
+        <li class="user-menu_new-_group">
+          <a href="/user/@@@@@@@@@@@@@@/edit">
+           <i class="fa fa-cog"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="groups">
+      <a href="/groups/@@@@@@@@@@@@@@@@/messeages">
+        <div class="group">
+          <p class="group__group-name"></p>
+          <p class="group__latest-message"></p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="chat-main">
+    <div class="main-header">
+      <div class="current-group">
+        <h2 class="current-group__name"></h2>
+        <ul class="member-list">
+          <li class="member-list__member"></li>
+        </ul>
+      </div>
+      <a href="/groups/@@@@@@@@@@@@@@/edit">
+        <div class="main-header__edit-btn">Edit</div>
+      </a>
+    </div>
+    <div class="messeages">
+      <div class="messeage">
+        <div class="upper-info">
+          <p class="upper-info__user"></p>
+          <p class="upper-info__date"></p>
+        </div>
+        <p class="messeage_text"></p>
+      </div>
+    </div>
+    <div class="form">
+      <form class="new-messeage" id="new_messeage" action="/groups/@@@@@@@@@@@@/messeages" enctype="multipart/form-data" accept-charset="UTF-8" method="post">
+        <input type="text" class="input-box__text" name="messeage[content]" id="messeage_content">
+        <div class="input-box">
+          <input type="text" class="input-box__text" name="messeage[content]" id="messeage_content">
+          <label for="messeage_image" class="image-label">
+            <i class="fa fa-image"></i>
+            <input type="file" class="image-label__input" name="messeage[image]" id="messeage_image">
+          </label>
+        </div>
+        <input type="submit" class="new-messeage__submit-btn" name="commit" value="Send" data-disable-with="Send">
+      </form>
+    </div>
+  </div>
+</div>
