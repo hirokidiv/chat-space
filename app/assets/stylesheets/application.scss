@@ -39,6 +39,14 @@ p{
   margin-inline-end: 0px;
 }
 
+.user-menu{
+  display: flex;
+}
+
+.user-menu li{
+  margin-left:0.3rem;
+}
+
 ul {
   margin-block-start: 1em;
   margin-block-end: 1em;
