@@ -1,6 +1,9 @@
 @import "./reset";
 @import "font-awesome";
 
+*{
+  box-sizing: border-box;
+}
 .chat-side{
   width: 300px;
   color: white;
