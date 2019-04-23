@@ -1,39 +1,4 @@
 @import "./reset";
 @import "font-awesome";
-
-*{
-  box-sizing: border-box;
-}
-.chat-side{
-  width: 300px;
-  color: white;
-}
-
-a{
-  color: white;
-}
-.side-header{
-  background-color: #253141;
-  height: 100px;
-  font-weight: bold;
-  width: 100%;
-  padding: 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.user-menu{
-  display: flex;
-}
-
-.user-menu li{
-  margin-left: 0.3rem;
-}
-
-.groups{
-  background-color: #2f3e51;
-  padding: 20px 20px 0;
-  height: calc(100vh - 100px);
-  width: 100%;
-}
+@import "./modules/chat-main";
+@import "./modules/side-bar";
