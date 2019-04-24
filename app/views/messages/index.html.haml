@@ -5,10 +5,10 @@
       %p.side-header__user-name 熊谷裕樹
       %ul.side-header__user-menu
         %li.user-menu__edit-user
-          = link_to  "" do
+          = link_to "#" do
             %i.fa.fa-edit
         %li.user-menu__new-group
-          = link_to  "" do
+          = link_to "#" do
             %i.fa.fa-cog
     .groups
       = render partial: "group", local: {}
@@ -17,7 +17,7 @@
       .current-group
         %h2.group-name 猫好き集まれ
         = render partial: "member-list", local: {}
-        = link_to  "" do
+        = link_to "#" do
           .current-group__edit-btn Edit
     .messages
       = render partial: "message", locals: {}
