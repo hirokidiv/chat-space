@@ -1,6 +1,10 @@
 .message
   .message__upper-info
-    %p.message__upper-info__user kumagai
-    %p.message__upper-info__date 2019/04/16
-  %p.message__text メンター猫
-  %img{alt: "", src: "/uploads/message/image/1601/Sneko210DSC03390_TP_V4.jpg"}/
+    .message__upper-info__user
+      = message.user.name
+    .message__upper-info__date
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
+  .message__text
+    - if message.body.present?
+      = message.body
+  = image_tag message.image.url if message.image.present?
