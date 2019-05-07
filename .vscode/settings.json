@@ -1,0 +1,5 @@
+{
+  // "window.openWithoutArgumentsInNewWindow": "on",
+  "window.restoreWindows": "none",
+  "explorer.autoReveal": false
+}
