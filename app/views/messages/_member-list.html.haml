@@ -1,4 +1,5 @@
 %ul.member-list
   member：
-  %li.member-list__member kumagai
-  %li.member-list__member kurihara
+  %li.member-list__member 
+    - @group.group_users.each do |group_user|
+      = group_user.user.name
