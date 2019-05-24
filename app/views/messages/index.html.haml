@@ -18,7 +18,7 @@
         %h2.group-name 
           = @group.name
         = render partial: "member-list", local: {}
-      = link_to edit_group_path(1) do
+      = link_to edit_group_path(@group) do
         .current-group__edit-btn Edit
     .messages
       = render @messages
