@@ -27,7 +27,7 @@ $(function () {
         url: url,
         type: "POST",
         data: formData,
-        dataTypw: "json",
+        dataType: "json",
         processData: false,
         contentType: false
       })
