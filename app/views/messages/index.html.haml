@@ -20,7 +20,7 @@
         = render partial: "member-list", local: {}
       = link_to edit_group_path(@group) do
         .current-group__edit-btn Edit
-    .messages
+    .messages{data: {"group_id": "#{@group.id}"}}
       = render @messages
     .form
       = form_for [@group, @message] do |f|
