@@ -43,6 +43,7 @@ $(document).on('turbolinks:load', function(){
           });
           //メッセージが入ったHTMLを取得
           $(".messages").append(insertHTML)
+          $('.messages').animate({ scrollTop: $(".messages")[0].scrollHeight }, 'fast');
         })
         .fail(function () {
           console.log('error');
