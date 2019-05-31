@@ -34,13 +34,12 @@ $(document).on('turbolinks:load', function(){
           var insertHTML = "";
           messages.forEach(function(message){
             insertHTML += buildHTML(message);
-            console.log( buildHTML(message) );
           });
           $(".messages").append(insertHTML)
           $('.messages').animate({ scrollTop: $(".messages")[0].scrollHeight }, 'fast');
         })
         .fail(function () {
-          console.log('error');
+          alert("error");
         });
     };
         
@@ -63,8 +62,8 @@ $(document).on('turbolinks:load', function(){
         .done(function(data){
           var html = buildHTML(data)
           $(".messages").append(html)
-          $(".input-box__text").val("");
-          $(".image-label__input").val("");
+          $(".input-box__text").reset();
+          $(".image-label__input").reset();
           $(".new-message__submit-btn").attr("disabled", false);
           $('.messages').animate({ scrollTop: $(".messages")[0].scrollHeight }, 'fast');
         })
