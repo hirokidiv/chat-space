@@ -21,15 +21,16 @@ $(document).on('turbolinks:load', function(){
     };
 
     var reloadMessages = function () {
-      var last_message_id = $(".message:last").data("id");
-      var group_id = $(".messages").data("group-id")
-      var url = `/groups/${group_id}/api/messages`
-      $.ajax({
-        url: url,
-        type: 'get',
-        dataType: 'json',
-        data: { id: last_message_id}
-      })
+      if (window.location.href.match(/\/groups\/\d+\/messages/)){
+        var last_message_id = $(".message:last").data("id");
+        var group_id = $(".messages").data("group-id")
+        var url = `/groups/${group_id}/api/messages`
+        $.ajax({
+          url: url,
+          type: 'get',
+          dataType: 'json',
+          data: { id: last_message_id} 
+        })
         .done(function (messages) {
           var insertHTML = "";
           messages.forEach(function(message){
@@ -40,8 +41,11 @@ $(document).on('turbolinks:load', function(){
         })
         .fail(function () {
           alert("error");
-        });
-    };
+          });
+        }else{
+          clearInterval();
+        };
+      };
         
 
     setInterval(reloadMessages, 5000);
@@ -62,8 +66,8 @@ $(document).on('turbolinks:load', function(){
         .done(function(data){
           var html = buildHTML(data)
           $(".messages").append(html)
-          $(".input-box__text").reset();
-          $(".image-label__input").reset();
+          $(".input-box__text").val("");
+          $(".image-label__input").val("");
           $(".new-message__submit-btn").attr("disabled", false);
           $('.messages').animate({ scrollTop: $(".messages")[0].scrollHeight }, 'fast');
         })
