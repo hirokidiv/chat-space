@@ -64,8 +64,8 @@ $(document).on('turbolinks:load', function(){
         contentType: false
       })
         .done(function(data){
-          var html = buildHTML(data)
-          $(".messages").append(html)
+          var html = buildHTML(data);
+          $(".messages").append(html);
           $(".input-box__text").val("");
           $(".image-label__input").val("");
           $(".new-message__submit-btn").attr("disabled", false);
