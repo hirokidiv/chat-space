@@ -12,7 +12,7 @@ $(document).on('turbolinks:load', function(){
                         ${message.created_at}
                       </div>
                     </div>
-                    <div class="message__Text">
+                    <div class="message__text">
                       ${ body }
                     </div>
                     <img src="${ img }">
