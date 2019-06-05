@@ -2,7 +2,7 @@ $(document).on('turbolinks:load', function(){
   $(function(){
     function buildHTML(message){
       var body = message.body? `${message.body}` : '';
-      var img = message.image? `${message.image}` : '';
+      var img = message.image ? `<img src="${message.image}">` : '';
       var html = `<div class="message" data-id="${message.id}">
                     <div class="message__upper-info">
                       <div class="message__upper-info__user">
@@ -15,7 +15,7 @@ $(document).on('turbolinks:load', function(){
                     <div class="message__text">
                       ${ body }
                     </div>
-                    <img src="${ img }">
+                      ${img}
                   </div>`
       return html
     };
